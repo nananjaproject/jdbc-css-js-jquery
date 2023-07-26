@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>2023. 5. 2. 오후 12:36:37</title>
+<link rel="shortcut icon" type="image/x-icon" href="../images/SiSt.ico">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+</head>
+<body>
+<h3>ex06_03.html</h3>
+
+<input type="text"  autofocus="autofocus">
+
+<select name="operator" id="operator">
+    <option>선택하세요.</option>
+	<option value="" >+</option>
+	<option value="">-</option>
+	<option value="">*</option>
+	<option value="">/</option>
+	<option value="">%</option>
+	<option value="">**</option>
+</select> 
+
+<input type="number" >
+ = 
+ <input type="text"  disabled="disabled">
+ 
+<script>
+   // jquery 
+   $(":text").first().on("keydown", function(event){
+	   // 이벤트 취소하는 함수 	   event.stopPropagation();
+	   if( event.which == 13){ 
+		   $(this).next().focus();
+	   }
+   });
+   
+   let op ;
+   $("#operator").change(function(event) {
+	    // $(this).val();
+	    // $("#operator option:selected").val()  , tex()
+	    op = $(this).find(":selected").text() ;
+   		$(this).next().focus();
+   });
+   
+   
+   // 3:05 수업 시작~~~
+   $("input[type=number]").on("keydown", function(event){	    
+	   if( event.which == 13){ 
+		   let result ;
+		    switch (op) {
+			case '+':
+				 result =   Number( $(":text").first().val() ) +  parseInt(  $(this).val() );				
+				break;
+			case '-':
+				result =   Number( $(":text").first().val() ) -  parseInt(  $(this).val() );
+				break;
+			default:
+				break;
+			}
+		    
+		    $(this).next().val( result );
+	   }
+   });
+   
+</script> 
+</body>
+</html>
+
+
+
+
+

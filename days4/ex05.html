@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>2023. 5. 2. 오전 11:41:36</title>
+<link rel="shortcut icon" type="image/x-icon" href="../images/SiSt.ico">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<style>
+   select{
+      height: 200px;
+      width: 100px;
+   }
+   button{
+      width:40px;
+   }   
+</style>
+</head>
+<body>
+<table>
+	<tr>
+		<td>
+				<select multiple="multiple" id="sleft">
+				  <option>이창익</option>
+				  <option>김가율</option>
+				  <option>임종윤</option>
+				  <option>문혜빈</option>
+				  <option>엄태혁</option>
+				</select>
+		</td>
+		<td>
+		   <button>▶</button><br>
+		   <button>▶▶</button><br>
+		   <button>◀</button><br>
+		   <button>◀◀</button><br>
+		</td>
+		<td>
+		<select multiple="multiple" id="sright">
+		</select>
+		</td>
+	</tr>
+</table>   
+<script>
+  // <button>▶</button>
+  // document.querySelector("button");
+   document.querySelector("button:first-of-type").onclick = function (){
+	   // alert("test");
+	   let sleftOptions = document.querySelectorAll("#sleft option");
+	   let sright = document.querySelector("#sright");
+	   
+	   sright.innerHTML = "";
+	   // sright.options.length = 0;  모든 option  제거
+	   
+	   // alert( sleftOptions.length )  5
+	   for (var i = 0, j = 0; i < sleftOptions.length; i++) {
+		   if (sleftOptions[i].selected) {
+			 // console.log( sleftOptions[i].value +" / " + sleftOptions[i].text )
+			 
+			 // 1. 
+			 // sright.options[j++]  = new Option(sleftOptions[i].text );
+			 
+			 // js 복제
+			 sright.appendChild(  sleftOptions[i].cloneNode(true)    )
+			 // jquery 복제
+			 // $("#sright").append(  $(element).clone()  );
+			 
+			  
+		   } //if
+	   } // for
+   } // click
+   
+   // <button>▶▶</button>
+   document.querySelector("button:nth-of-type(2)").onclick = function (){
+ 
+	   let sleftOptions = document.querySelectorAll("#sleft option");
+	   let sright = document.querySelector("#sright");
+	   
+	   sright.innerHTML = "";
+	  
+	   // js appendChild
+	   for (var i = 0, j = 0; i < sleftOptions.length; i++) {
+		   if (sleftOptions[i].selected) {  
+			   sright.appendChild(  sleftOptions[i]  ); 
+		   } //if
+	   } // for
+   } // click
+</script>
+</body>
+</html>
+
+
+
+
+
+
+

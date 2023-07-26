@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>2023. 5. 2. 오전 5:11:29</title>
+<link rel="shortcut icon" type="image/x-icon" href="../images/SiSt.ico">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+</head>
+<body>
+<pre>
+  [js DataType  8가지]
+  1. string   문자열
+  2. number 숫자
+  3. Bigint  큰숫자 ES 2020
+  4. boolean
+  5. undefined
+  6. null
+  7. 기호
+  8. object
+  
+  [js Object DataType]
+  1. object
+  2. array
+  3. date
+</pre>
+<script>
+   let name = "admin";   //  ''
+   // alert( typeof name ); // string
+   let age = 20;
+   // alert( typeof age ); // number
+   const pi = 3.14;
+   // alert( typeof pi );   // number
+   // number   :  js 정수+실수    8바이트 부동소수점
+   
+   let gender = true;
+   // alert( typeof gender ); // boolean
+   
+   let x ;
+   // alert( typeof x );  // undefined
+   
+   // js object
+   /*
+   class Person {
+	   private String name;
+	   private int age;
+	   //
+	   //
+   }
+   Person p = new Person();
+   p.name;
+   p.method();
+   */
+   
+   // {}   js object    중괄호   
+  const p = { name:"admin", age:20 };
+   console.log(   p.name  );
+   console.log(   p["age"]  );
+   
+   // [] js array 대괄호
+   const cars = ["Volvo", "Kia", "BMW"];
+   console.log(   cars[0] );
+   
+   // let, const , var 키워드로 변수를 선언하면
+   // 모든 js 데이터 유형을 변수로 받을 수 있더라. 
+   
+   let a = 16 +"apple";  // "16apple"
+   let b = 1 + 2 + "apple"; // 3 + "apple" // "3apple"
+   
+   let c ;        // undefined 자료형
+   c = 5;        // number 자료형
+   c = "apple";  // string 자료형
+   
+   
+   let s = "i'am tom";
+   s =   'a"b"c';
+   
+   let d = 123e5;   // 지수 표기 123 * 10^5 == 12300000
+   
+   // BigInt  :  큰 정수를 저장하는 데 사용되는 자료형
+   let e = BigInt("123456789012345678901234567890")
+   
+   //alert( typeof 3 );
+   //alert( typeof (3) );
+   
+   // let f ;          // undefined
+   let f = "";        // string
+   
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

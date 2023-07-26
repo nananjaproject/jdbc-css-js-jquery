@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>2023. 5. 2. 오후 3:11:18</title>
+<link rel="shortcut icon" type="image/x-icon" href="../images/SiSt.ico">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+<style>
+  table, th, td{
+    border: 1px solid gray;
+  }
+  
+  table{
+     width: 50%;
+     margin: 0 auto;
+  }
+</style>
+
+</head>
+<body>
+
+<table>
+  <thead>
+	<tr>
+		<td><input type="checkbox" class="all">모두 선택</td>
+		<td>Name</td>
+		<td>Loc</td>
+	</tr>
+  </thead>	
+  <tbody>
+	<tr>
+	            <!-- b_ckbs[i] -->
+		<td><input type="checkbox" id="ck1"></td>
+		<td>Animi.</td>
+		<td>Hic.</td>
+	</tr>
+	<tr>
+		<td><input type="checkbox" id="ck2"></td>
+		<td>Esse.</td>
+		<td>Fuga.</td>
+	</tr>
+	<tr>
+		<td><input type="checkbox" id="ck3"></td>
+		<td>Fuga.</td>
+		<td>Ducimus?</td>
+	</tr>
+	<tr>
+		<td><input type="checkbox" id="ck4"></td>
+		<td>Beatae.</td>
+		<td>Optio.</td>
+	</tr>
+  </tbody>
+  <tfoot>
+     <tr>
+        <td colspan="3" align="center">
+           <button>선택 확인</button>
+        </td>
+     </tr>
+  </tfoot>	
+</table>
+
+<p id="demo"></p>
+
+<script>
+   // input[type=checkbox]
+   // <input type="checkbox" class="all">
+   // $(":checkbox").hasClass("all")
+   $(":checkbox.all").click(function(event) {        
+         // jquery  selector      :not()
+         $(":checkbox:not(.all)").prop("checked" ,    $(this).prop("checked") );
+   });
+   
+   $(":checkbox:not(.all)").click(function(event) {
+	  let totalCount = $(":checkbox:not(.all)").length  ;
+	  let checkedCount = $(":checkbox:not(.all):checked").length;	    
+      $(":checkbox.all").prop("checked", totalCount == checkedCount ? true : false); 
+   });
+   //  선택확인 벝튼 클릭 p#demo    id, name 출력    5:08수업 시작~ 
+   
+   $("tfoot button").click(function(event) {
+   	//  let content = "";
+   	  
+   	$(":checkbox:not(.all):checked").each(function(i, element) {
+   		 let id =  element.id;
+   		 let name = element.parentElement.parentElement.children[1].innerHTML;   		
+   		// content += "<li>"+ id + "/ " + name  +"</li>";
+   		
+   		$("p#demo").html( function (index, oldhtml){
+   			return oldhtml +"<li>"+ id + "/ " + name  +"</li>";
+   			
+   			// return oldhtml +  $("<li></li>").text(id + "/ " + name);
+   		});
+   	});
+   	  
+   	  // $("p#demo").html(  content );  // text()
+   });
+</script>
+</body>
+</html>
+
+
+
+
+
+
+

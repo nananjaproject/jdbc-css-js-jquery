@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>2023. 5. 2. 오후 12:36:37</title>
+<link rel="shortcut icon" type="image/x-icon" href="../images/SiSt.ico">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+</head>
+<body>
+ 
+<input type="text"  autofocus="autofocus">
+ + 
+<input type="number" >
+ = 
+ <input type="text"  disabled="disabled">
+ 
+<script>
+ let txt1 = document.querySelector("input[type=text]:first-of-type");
+ let txt2 = document.querySelector("input[type=text]:nth-of-type(2)");
+ let txt3 = document.querySelector("input[type=text]:last-of-type");
+
+  document.querySelector("input[type=text]:first-of-type").onkeydown = function (){
+	  // event.keyCode   65
+	  // '0' 48 ~ '9' 57
+	  if(  !( event.keyCode >= 48  && event.keyCode <= 57  || event.keyCode == 13
+			  || event.keyCode == 8 || event.keyCode == 229 )   ){
+		  alert("입력 잘못!!!");
+		  event.returnValue = false;   // 이벤트 취소
+	  }
+	  if(  event.keyCode == 13  ){
+		  // alert(  this.nextElementSibling );
+		  // this.nextElementSibling.focus();
+		  document.querySelector("input[type=text]:nth-of-type(2)").focus();
+	  }
+  }
+  
+  txt2.onkeydown = function (){
+	  if(  event.keyCode == 13  ){
+		   //  "12" + "4" = "124"
+		   // java  "12" -> 12   Integer.parseInt("12");
+		   // js       Number(), parseInt(), parseFloat(), eval()
+		   txt3.value =  Number(txt1.value) +  parseInt( txt2.value );
+	  }
+  }
+</script> 
+</body>
+</html>
+
+
+
+
+

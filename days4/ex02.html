@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>2023. 5. 2. 오전 9:30:56</title>
+<link rel="shortcut icon" type="image/x-icon" href="../images/SiSt.ico">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+</head>
+<body>
+<pre>
+   [js 함수(function)]
+   1. 개념 - 반복적으로 사용되는 코드 블럭을 함수로 처리.
+                  예) 선 긋기 ( drawLine() )
+   2. 함수 선언 형식
+       function 함수명([매개변수1, 매개변수2...]){
+            // 명령코딩
+            
+            [return 리턴값;]
+       }        
+    3. js 함수 호출
+        1) onclick  이벤트 발생할 때 함수 호출
+           <button onclick="test();"></button>
+        2) js 코딩 에서 함수 호출
+        3)  자체 호출 ***
+              (함수 클로저)         
+     4. 함수 반환(리턴)값.
+         return 문을 만나면 함수를 호출한 곳으로 돌아간다. 
+                                              리턴값         
+</pre>
+
+<script>
+   // 함수 선언 부분
+   function test() {
+	  //                alert(this);  // widnow 객체
+	  // 엄격모드                             undefined *** 
+	  alert("test ...");
+  }
+   
+   test();  // 함수 호출 부분
+   
+   
+   // a, b 매개변수는 sum {  }  사용되는 지역변수이다.  
+   function sum(a, b) {
+	   let c = 30;  // 지역변수
+	return a + b;
+   }
+   
+   let x = sum(10, 20);
+   alert(  x  );
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

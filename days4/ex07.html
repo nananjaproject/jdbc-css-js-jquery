@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>2023. 5. 2. 오후 3:11:18</title>
+<link rel="shortcut icon" type="image/x-icon" href="../images/SiSt.ico">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+<style>
+  table, th, td{
+    border: 1px solid gray;
+  }
+  
+  table{
+     width: 50%;
+     margin: 0 auto;
+  }
+</style>
+
+</head>
+<body>
+
+<table>
+  <thead>
+	<tr>
+		<td><input type="checkbox" class="all">모두 선택</td>
+		<td>Name</td>
+		<td>Loc</td>
+	</tr>
+  </thead>	
+  <tbody>
+	<tr>
+	            <!-- b_ckbs[i] -->
+		<td><input type="checkbox" id="ck1"></td>
+		<td>Animi.</td>
+		<td>Hic.</td>
+	</tr>
+	<tr>
+		<td><input type="checkbox" id="ck2"></td>
+		<td>Esse.</td>
+		<td>Fuga.</td>
+	</tr>
+	<tr>
+		<td><input type="checkbox" id="ck3"></td>
+		<td>Fuga.</td>
+		<td>Ducimus?</td>
+	</tr>
+	<tr>
+		<td><input type="checkbox" id="ck4"></td>
+		<td>Beatae.</td>
+		<td>Optio.</td>
+	</tr>
+  </tbody>
+  <tfoot>
+     <tr>
+        <td colspan="3" align="center">
+           <button>선택 확인</button>
+        </td>
+     </tr>
+  </tfoot>	
+</table>
+
+<!-- 1. 체크된 체크박스의 id 속성값 출력 -->
+<!-- 2. Name 컬럼의 값도 출력 -->
+<p id="demo"></p>
+
+<script>
+//body > table > thead > tr > td:nth-child(1) > input
+let h_ckb =   document.querySelector("body > table > thead > tr > td:nth-child(1) > input");
+let b_ckbs = document.querySelectorAll("body > table > tbody > tr > td:nth-child(1) > input[type=checkbox]");
+
+  h_ckb.onclick = function (){
+	   // alert("x");
+	   // alert(  this.checked ); 
+	  
+	  // alert( b_ckbs.length );
+	  // foreach() X
+	  for (var i = 0; i < b_ckbs.length; i++) {
+		  b_ckbs[i].checked = this.checked;
+	   } // for
+   }
+   
+  for (var i = 0; i < b_ckbs.length; i++) {
+	     b_ckbs[i].onclick = function (){
+		    let b_ckbs_all_checked = true;
+		    for (var j = 0; j < b_ckbs.length; j++) {
+		    	b_ckbs_all_checked =  b_ckbs[j].checked;
+		    	if( b_ckbs_all_checked  == false) break;
+		    }
+		    
+		    h_ckb.checked = b_ckbs_all_checked;
+	   }
+   } // for
+    
+   
+   let pdemo = document.querySelector("p#demo");
+   
+   document.querySelector("tfoot button").onclick = function (){
+	   let content = "";
+	   for (var i = 0; i < b_ckbs.length; i++) {
+			 if(  b_ckbs[i].checked ){
+				 let id =  b_ckbs[i].id ;
+				 // <tr>		         
+			     //    <td><input type="checkbox" id="ck1"></td>
+			     //    <td>이름</td>
+			     // [ DOM 순환 ]
+				 // let name = b_ckbs[i].parentElement.nextElementSibling.innerHTML   ;
+				 let name = b_ckbs[i].parentElement.parentElement.children[1].innerHTML;
+				 
+				 // console.log (   id  );
+				 content += "<li>"+id +" / " + name +"</li>";
+			 }  // if
+	   } // for
+	   pdemo.innerHTML = content;
+   }
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
