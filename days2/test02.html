@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>2023. 4. 27. 오전 8:04:19</title>
+<link rel="shortcut icon" type="image/x-icon" href="../images/SiSt.ico">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+</head>
+<body>
+	<h3>ex01_03.html - [ js ]html 속성 변경</h3>
+	<pre>
+      Turn on 버튼을 누르면 전구에 불을 켜도록 할 예정
+      img 요소의  src 속성을 ../images/pic_bulbon.gif   변경
+                        alt 속성 ="bulbon"
+                        
+     pic_bulboff.gif                        
+     pic_bulbon.gif
+  </pre>
+	<!-- 문제 2 풀이 -->
+	<button>Turn on</button>
+	<button disabled="disabled">Turn off</button>
+
+	<br>
+	<img src="../images/pic_bulboff.gif" alt="" id="bulb">
+
+	<h3>1. js 코딩</h3>
+	<h3>2. jquery 코딩</h3>
+
+	<script>
+		// Turn on 버튼		
+		$("button:nth-of-type(1)").click(function() {
+
+			$("#bulb").attr({
+				src : "../images/pic_bulbon.gif",
+				alt : "bulbon"
+			});
+
+			$(this).prop("disabled", true).next().prop("disabled", false);
+
+		})
+
+		$("button:nth-of-type(2)").click(function() {
+			$("#bulb").attr({
+				src : "../images/pic_bulboff.gif",
+				alt : "bulboff"
+			});
+
+			$(this).prop("disabled", true).prev().prop("disabled", false);
+
+		})
+	</script>
+</body>
+</html>

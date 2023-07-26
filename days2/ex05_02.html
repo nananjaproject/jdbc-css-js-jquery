@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>2023. 4. 27. 오후 4:14:19</title>
+<link rel="shortcut icon" type="image/x-icon" href="../images/SiSt.ico">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<style>
+   .active{
+     background-color: yellow;
+     color: red;
+     font-size: 25px;
+   }
+</style>
+</head>
+<body>
+좋아하는 과목을 모두 선택하세요 ? 
+<br>
+<input type="checkbox"  name="subject"  id="kor" value="kor"  ><label for="kor">국어</label><br>
+<input type="checkbox"  name="subject"  id="eng" value="eng"  ><label for="eng">영어</label><br>
+<input type="checkbox"  name="subject"  id="mat" value="mat"  ><label for="mat">수학</label><br>
+<input type="checkbox"  name="subject"  id="pe" value="pe"  ><label for="pe">체육</label><br>
+<br>
+<br>
+<br>
+<button>확인</button>
+<p id="demo"></p>
+
+<script>
+    $("button").click(function(event) {
+    	// alert("확인");
+    	// $("input[type=checkbox][name=subject]")
+    	// alert( $(":checkbox[name=subject]").length );
+    	// 5:00 수업 시작~ 
+    	/*
+    	var ckbAll =  $(":checkbox[name=subject]");
+    	var content = "";
+    	for (var i = 0; i < ckbAll.length; i++) {
+    		if( ckbAll[i].checked ){
+			   content += ckbAll[i].value +"<br>";
+    		}
+		} // for
+		$("#demo").html( content);
+		*/
+     
+    	$(":checkbox[name=subject]:checked").each(function(i, element) {
+    		$("#demo").html(function (index, oldhtml){
+    			return oldhtml + $(element).val() + " / " + $(element).next().text() + "<br>";
+    		});
+    	});
+    	 
+    });
+</script>
+</body>
+</html>
+
+
+
+
+
+
+

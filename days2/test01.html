@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>2023. 4. 26. 오후 5:21:35</title>
+<link rel="shortcut icon" type="image/x-icon" href="../images/SiSt.ico">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<style>
+   div#demo{
+       border:1px solid gray;
+       width:200px;
+       height: 100px;
+       overflow: auto;
+   }
+</style>
+</head>
+<body>
+이름 입력 : <input type="text"  name="name"><br>
+<button>추가</button>
+<div id="demo"></div>
+
+<h3>1. js 코딩</h3>
+<h3>2. jquery 코딩</h3>
+
+<script>
+   var n = 1;
+   var txt = document.querySelector("input:first-of-type");
+   var demo = document.querySelector("#demo");
+   document.querySelector("button").onclick = function (){
+	  var name = txt.value;
+	  demo.innerHTML += (n++) +" : " + name + "<br>";
+	  txt.select();
+	  demo.scrollTop = demo.scrollHeight;	  
+	  // txt.setSelectionRange(0,3);
+   }
+   
+</script>
+</body>
+</html>

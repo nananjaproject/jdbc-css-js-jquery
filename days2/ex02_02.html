@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>2023. 4. 27. 오전 10:49:14</title>
+<link rel="shortcut icon" type="image/x-icon" href="../images/SiSt.ico">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+</head>
+<body onload="window_load();">
+<h3>ex02_02.html</h3> 
+<button>Turn on</button>
+<button>Turn off</button>
+<br>
+<img src="" alt="" >
+<br>
+<button>Turn on</button>
+
+<script>
+   $(document).ready(function() {
+	   // attr()
+	   // prop()
+	   /*
+   	   $("button:nth-of-type(2)")
+   	               .attr("disabled","disabled" )
+   	               .attr("alt","bulb on" );
+	   */
+	 
+	   $("button:nth-of-type(2)").attr({
+		   disabled:"disabled",
+		   alt : "bulb on"
+	   });
+ 
+	   $("img").attr({
+		   src:"../images/pic_bulboff.gif",
+		   alt:"bulb"
+	   }); 
+	   
+	   // button:first-of-type
+	   $("button").first().click(function(event) {
+	   	    // alert("on")
+		   $("img").attr( "src", "../images/pic_bulbon.gif"	 );
+	   	   $(this)
+	   	       .prop("disabled", true)
+	   	       .next()
+	   	           .prop("disabled", false);
+	   	       
+	   });
+	   
+	   // button:nth-of-type(2)
+	   $("button").eq(1).click(function (event){
+		   // alert("2");
+		   $("img").attr( "src", "../images/pic_bulboff.gif"	 );
+	   	   $(this)
+	   	       .prop("disabled", true)
+	   	       .prev()
+	   	           .prop("disabled", false);
+	   });
+	   
+	   // button:nth-of-type(3)
+	   // button:last-of-type
+	   var sw = false;
+	   $("button").last().click(function(event) {
+	   	   // alert("last")
+	   	   // 12:50 ~
+	   	   $("img").attr( "src", "../images/pic_bulb" + ( sw ? "off" : "on" )+".gif"	 );
+		    $(this).html(       sw ? "Turn on" : "Turn off"     ); 
+		    sw = !sw ;
+	   });
+	   
+	   
+	   // 전구 ..
+	   $("img").hover(
+		    function (){  // mouseover
+		    	$("img").attr( "src", "../images/pic_bulbon.gif"	 );
+		    },
+		    function (){ // mouseout
+		    	$("img").attr( "src", "../images/pic_bulboff.gif"	 );
+		    }
+	   );
+   });  // ready
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

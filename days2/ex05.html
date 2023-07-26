@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>2023. 4. 27. 오후 4:14:19</title>
+<link rel="shortcut icon" type="image/x-icon" href="../images/SiSt.ico">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<style>
+   .active{
+     background-color: yellow;
+     color: red;
+     font-size: 25px;
+   }
+</style>
+</head>
+<body>
+좋아하는 과목을 모두 선택하세요 ? 
+<br>
+<input type="checkbox"  name="subject"  id="kor" value="kor"  ><label for="kor">국어</label><br>
+<input type="checkbox"  name="subject"  id="eng" value="eng"  ><label for="eng">영어</label><br>
+<input type="checkbox"  name="subject"  id="mat" value="mat"  ><label for="mat">수학</label><br>
+<input type="checkbox"  name="subject"  id="pe" value="pe"  ><label for="pe">체육</label><br>
+<br>
+<br>
+<br>
+<button>확인</button>
+<p id="demo"></p>
+
+<script>
+   document.querySelector("button").onclick = ()=>{
+	   // alert("test")
+	   var ckbAll = document.querySelectorAll("input[type=checkbox][name=subject]");
+	   // var ckbAll = document.getElementsByName("subject");
+	   // alert( ckbAll.length ); // 4
+	   var content = "";
+	   for (var i = 0; i < ckbAll.length; i++) {
+		   if(   ckbAll[i].checked ){
+			   // console.log( ckbAll[i].value );
+			   var nextLbl = ckbAll[i].nextElementSibling;
+			   content +=   "<b class='active'>"+ ckbAll[i].value +" / " + nextLbl.innerText +"</b><br>";
+		   }
+	  } // for
+	  
+	  document.getElementById("demo").innerHTML =  content;
+   }
+</script>
+</body>
+</html>
+
+
+
+
+
+
+

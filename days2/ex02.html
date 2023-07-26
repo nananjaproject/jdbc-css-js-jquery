@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>2023. 4. 27. 오전 10:49:14</title>
+<link rel="shortcut icon" type="image/x-icon" href="../images/SiSt.ico">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+</head>
+<body onload="window_load();">
+<h3>ex02.html</h3>
+<!-- 11:00 수업시작~ -->
+<button>Turn on</button>
+<button>Turn off</button>
+<br>
+<img src="" alt="" >
+<br>
+<button>Turn on</button>
+
+<script>
+   var btnOn = document.querySelector("button:first-of-type");
+//   var btnOff = document.querySelector("button:last-of-type");
+var btnOff = document.querySelector("button:nth-of-type(2)");
+   var img = document.querySelector("img");
+   
+   var btnOnOff = document.querySelector("button:last-of-type");
+   
+   var sw = false;
+   btnOnOff.onclick = function (){
+		sw ? bulb_off() :  bulb_on(); 
+		btnOnOff.innerHTML =  sw ? "Turn on" : "Turn off";
+	    sw = !sw ;
+   }
+   
+   
+   function window_load(){
+	  // 1. Turn off 버튼 비활성 
+	  // disabled="disabled" // 비활성화	   
+	  // btnOff.disabled = true ;  // 비활성화
+	  btnOff.setAttribute("disabled", "disabled");
+	   
+	  
+	   // 2. img    src 속성   ../images/pic_bulboff.jpg
+	   // img.src = "";
+	  img.setAttribute("src", "../images11/pic_bulboff.gif");
+   }   
+   
+   btnOn.onclick = function (){
+	    bulb_on();
+   }
+   
+   //                        ()=>{      this  !=  btnOff.}
+   /*
+    btnOff.onclick = () => {
+    	alert( this ); // Window 객체
+    }
+    */ 
+   function bulb_on(){
+    	img.setAttribute("src", "../image11/pic_bulbon.gif");  
+  	   btnOn.setAttribute("disabled", "disabled");
+  	   btnOff.removeAttribute("disabled");
+    } 
+    function bulb_off(){
+    	img.setAttribute("src", "../images11/pic_bulboff.gif");	   
+  	   btnOff.setAttribute("disabled", "disabled");
+  	   btnOn.removeAttribute("disabled");
+    }
+    
+   btnOff.onclick = function (){       
+	   // alert( this );  HTMLButtonElement
+	   bulb_off();
+   }
+ 
+    img.onmouseover = function (){
+    	bulb_on();
+    }
+    
+    img.addEventListener("mouseout", function() {
+    	bulb_off();
+    });
+   
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

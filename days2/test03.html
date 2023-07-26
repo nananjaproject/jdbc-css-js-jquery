@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>2023. 4. 27. 오전 8:13:26</title>
+<link rel="shortcut icon" type="image/x-icon" href="../images/SiSt.ico">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<style>  
+</style>
+</head>
+<body onload="window_load();">
+
+<input id="pi_input" type="range" min="1" max="100" step="1" />
+<output id="out"></output>
+<p>홍길동</p>
+
+<script>
+    var fontSize = 16;
+    var p = document.querySelector("p");
+    var pi_input = document.querySelector("#pi_input");
+    var out = document.querySelector("#out");
+    
+   function window_load(){	   
+	   p.style.fontSize = fontSize + "px";	   
+	   pi_input.value = fontSize;
+	   out.textContent = fontSize;
+   }
+   
+   /*
+   input.addEventListener("input", (event) => {
+	   value.textContent = event.target.value
+	 });
+   */
+   pi_input.oninput = function (){
+	   out.textContent = fontSize = this.value;
+	   p.style.fontSize = fontSize + "px";
+   }
+</script>
+</body>
+</html>
+
+
+
+
+
+

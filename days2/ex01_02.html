@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>2023. 4. 27. 오전 9:25:59</title>
+<link rel="shortcut icon" type="image/x-icon" href="../images/SiSt.ico">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+</head>
+<body onload="window_load();">
+
+이름 입력 : <input type="text"   autofocus="autofocus">
+<br>
+<button id="btnAdd">추가</button>
+<button id="btnReset">초기화</button>
+<br>
+<div></div>
+
+<script>
+    // jquery coding
+    $(document).ready(function() {
+    	$("div").css({
+    		    "border":"1px solid gray",
+    			"width":"200px",
+    			"height":"150px",
+    			"overflow":"auto"
+    	});
+    	var no = 1;
+    	$("#btnAdd").click(function(event) {
+    		// jquery selector   :text == input[type=text]
+    		var name =  $(":text").val();
+    	     /*
+    		 $("div").html(  
+    				 $("div").html()  +(no++) + " : " + name+"<br>"  
+    				              );    	
+    		 */    		 
+    		 $("div").html( function ( index,  oldhtml ){
+    			   return   oldhtml  +(no++) + " : " + name+"<br>"    ;
+    		 } );    		   
+    		 
+    		 $(":text").select(); 
+    		 // [0] ?
+    		 $("div").scrollTop(  $("div")[0].scrollHeight   );
+    	});
+    	/*
+    	$("#btnAdd").on("click", function(event) {    		
+    	});
+    	*/
+    	
+    	$("#btnReset").click( (event) => {
+    		$(":text")
+    		       .val("")
+    		       .focus();
+    		$("div").html("");
+    	});
+    }); // ready
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+

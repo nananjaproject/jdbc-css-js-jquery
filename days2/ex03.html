@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>2023. 4. 27. 오후 1:55:27</title>
+<link rel="shortcut icon" type="image/x-icon" href="../images/SiSt.ico">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+</head>
+<body>
+
+<input type="range"   value=""  min="1"  max="100"  step="1">
+<label id="out"></label>
+<p>홍길동</p>
+
+<script>
+   var fontSize = 16;
+   var range = document.querySelector("input[type=range]");
+   var lbl = document.querySelector("label#out");
+   var p = document.querySelector("p");
+   
+   window.onload = function (){
+	 range.value = fontSize;
+	 lbl.innerHTML = range.value;
+	 p.style.fontSize = range.value + "px";
+   }
+   
+   range.oninput = function (){
+	    //lbl.innerHTML =  this.value;
+	    fontSize = lbl.textContent = event.target.value;
+	    p.style.fontSize = fontSize + "px";
+   }
+   
+</script>
+ 
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>2023. 4. 27. 오후 2:51:23</title>
+<link rel="shortcut icon" type="image/x-icon" href="../images/SiSt.ico">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<style>
+  .st{
+      color:red;
+      display: inline-block;
+      width:200px;
+      border:1px solid gray;
+  }
+  
+  input[type=text]{
+    width: 100%;
+  }
+</style>
+</head>
+<body>
+<!-- 3:02 수업 시작 -->
+<fieldset>
+  <legend>html 적용 여부</legend>
+  <input type="radio"  name="htmlapply"   value="1" id="a" checked="checked"><label for="a">적용</label>
+  <input type="radio"  name="htmlapply"  value="2" id="b"><label for="b">미적용</label>
+</fieldset>
+<input type="text"  id="msg"  value="<span class='st'>홍길동</span>" >
+<br>
+<button>실행</button>
+<br>
+<div id="demo"></div>
+
+<script>
+  $("button").click( function (){ 
+	  
+	  // 체크된 라디오버튼의 value 속성값을 얻어오는 코딩.
+    var c_value = $(":radio[name='htmlapply']:checked").val() ;
+	// X var c_value = $(":radio[name='htmlapply']").is(":checked").val() ;
+	  
+    if(  c_value == 1   ){	 
+    	  $("#demo").html(  $("#msg").val() );
+      }else if( c_value ==2 ){
+    	  $("#demo").text(  $("#msg").val() );
+      } 
+  });
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
