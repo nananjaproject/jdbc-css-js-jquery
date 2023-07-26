@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<style>
+.flex-container{
+background-color: #f1f1f1;
+
+
+display: flex;
+align-items:strech; /* 플렉스 항목 style="order:숫자" */
+}
+
+.flex-container> div{
+background-color: Dodgerblue;
+color:white;
+width:100px;
+margin:10px;
+text-align:center;
+line-height:75px;
+font-size:30px;
+}
+
+</style>
+
+
+</head>
+<body>
+<pre>
+[플렉스 항목(item)속성]
+1.order         순서            ex04.html
+2.flex-grow     커지는 속성 ex04_02html
+나머지 플렉스 항목에 비해 플렉스 항목이
+얼마나 커질지 지정하는 속성
+기본값 : 0
+3.flex-shrink   
+4.flex-basis
+5.flex
+6.align-self
+</pre>
+
+
+<div class="flex-container">
+<div>1</div>
+<div>2</div>
+<div>3</div>
+<div>4</div>
+</div>
+
+
+<!-- .flex-container>div[style=order:$]*4>{$} -->
+<div class="flex-container">
+	<div style="flex-grow:1">1</div>
+	<div style="flex-grow:1">2</div>
+	<div style="flex-grow:8">3</div>
+	
+</div>
+
+</body>
+</html>

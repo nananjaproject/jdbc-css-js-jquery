@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<style>
+.flex.container{
+background-color:Blue;
+display: flex;
+/* flex-wrap: nowarp; */
+/* /*  기본값 * 래핑되지 않도록 지정한다/ */
+/* flex-wrap: wrap-reverse; */
+/* justify-content:flex-start 기본값*/
+/* 플레스 항목(item)이 컨테이너의 중앙에 정렬 */
+
+/* 항목사이의 공백이 있는 표시 */
+	/* justify-content: space-between; */
+	
+/* 	행의 앞부분 뒷부분 및 사이의 공백 */
+	justify-content:space-around;
+
+ }
+
+
+
+.flex-container> div{
+	background-color:#f1f1f1;
+	margin: 10px;
+	padding: 20px;
+	font-size: 100px;
+	text-align: center;
+	width: 200px;
+}
+
+
+</style>
+
+
+</head>
+<body>
+<!-- {$}
+1플렉스 컨테이너 선언
+2플렉스 항목 선언 -->
+<div class="flex-container">
+	<div>1</div>
+	<div>2</div>
+	<div>3</div>
+</div>
+
+
+</head>
+<body>
+
+
+<pre>
+[플렉스 컨테이너] 속성
+1.flex-direction 방향 ex03_03
+2.flex-wrap 포장  ex.03_04
+3.flex-flow = flex -direction + flex-wrap 
+4.justify-content 정렬(수평)
+5.align-items 정렬(수직)
+6..align-content 정렬(내용)
+
+</pre>
+</body>
+</html>

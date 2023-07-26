@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+
+
+<style>
+
+.tooltip::hover.tooltiptext {
+visibility : visible;
+
+}
+
+
+.tooltip.tooltiptext {
+	visibility:hidden;
+	
+	position: absolute;
+	display: inline-block;
+	border-bottom: 1px dotted black;
+	color:#fff;
+	width:120px;
+	text-align:center;
+	border-radius: 6px;
+	padding: 5px 0;
+}
+
+.tooltip.tooltiptext{
+	position:absolute;
+	z-index:1;
+	bottom:150%;
+	left:50%;
+}
+
+	/* 의사요소- 특정일부분 */
+	.tooltip.tooltiptext::after{
+/* 	content:"~~~~~~"; */
+	content: "";
+	position: absolute;
+	top:100%;
+	left:50%;
+	margin-left:-5px;
+	border-width:5px;
+	border-style:solid;
+	border-color:black transparent transparent transparent;
+	}
+
+
+</style>
+
+</head>
+<body>
+
+   <h3>툴팁기능(Tooltip)-풍선도움말</h3>
+   <div class="tooltip">
+      Hover over me <span class="tooltiptext">Tooltip Text</span>
+</div>
+
+
+</body>
+
+</html>
