@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<style>
+.imgbox{
+text-align: center;
+width:120px;
+border:1px solid gray;
+margine: 4px;
+padding: 6px;
+float: left;}
+
+.imgbox button{
+width:100%;}
+
+imgbox image .imgbox img{
+width:100%
+}
+
+
+
+</style>
+
+
+
+
+
+</head>
+
+
+<script>
+ //jquery 수정. 
+ $("#imgbox1 button").click(function(){
+/* 	 alert("remove"); */
+/* 	$("#imgbox1").css("display","none") */
+ $("#imgbox1").hide();
+ });
+ $("imgbox2 button").click(function(){
+/* 	 alert("hide"); */
+	 $("#imgbox2").css("visibility","hidden");
+ });
+ $("imgbox3 button").click(function(){
+/* 	 alert("resetAll"); */
+
+ });
+ 
+</script>
+<body>
+
+
+<h3>ex04_02.html</h3>
+<div id="imgbox1" class="imgbox1">
+Box1<img src="./imgs/img_5terre.jpg" alt="" />
+<button>Remove</button></div>
+<div id="./imgs/img_lights.jpg" class="imgbox">
+Box2<img src="" alt="" />
+<button>hide</button></div>
+<div id="./imgbox3" class="imgbox">
+Box3<img src="" alt="" />
+<button>resetAll</button></div>
+
+
+
+
+
+
+
+</body>
+</html>

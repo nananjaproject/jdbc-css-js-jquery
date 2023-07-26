@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<style>
+.imgbox{
+text-align: center;
+width:120px;
+border:1px solid gray;
+margine: 4px;
+padding: 6px;
+float: left;}
+
+.imgbox button{
+width:100%;}
+
+imgbox image .imgbox img{
+width:100%
+}
+
+
+
+</style>
+
+
+
+
+
+</head>
+
+
+<script>
+function remove(){
+/* 	alert("remove"); */
+
+
+document.getElementById("imgbox1").style.display= "none"
+}
+function hide(){
+/* 	alert("hide"); */
+ 
+ 	/* css selector    */         /*  아이디명 */
+	var box2 = document.querySelector("#imgbox2")
+	box2.style.visibility = "hidden";
+	
+}
+
+
+function resetAll(){
+/* 	alert("resetAll"); */
+document.getElementById("imgbox1").style.display= "block"
+
+	box2.style.visibility ="visible";
+
+
+}
+</script>
+<body>
+
+
+<h3>ex04_02.html</h3>
+<div id="imgbox1" class="imgbox1">
+Box1<img src="./imgs/img_5terre.jpg" alt="" />
+<button>Remove</button></div>
+<div id="./imgs/img_lights.jpg" class="imgbox">
+Box2<img src="" alt="" />
+<button>hide</button></div>
+<div id="./imgbox3" class="imgbox">
+Box3<img src="" alt="" />
+<button>resetAll</button></div>
+</body>
+</html>

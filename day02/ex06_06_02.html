@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+<style>
+img{
+	width:100%;
+	height:auto;
+	opacity:0.3;
+	}
+	
+	.topLeft{
+	position: absolute;
+	top: 70px;
+	left: 20px;
+	font-size: 20px;
+	}
+	
+	.BottomLeft{
+	position: absolute;
+	bottom: 20px;
+	left: 20px;
+	font-size: 18px;
+	}
+	.container{
+	border:1px solid red;
+	position: relative;/**중요**/ 
+	}
+	
+	.BottomRight{
+	position: absolute;
+	bottom: 20px;
+	left: 20px;
+	font-size: 18px;
+	}
+	
+	
+	.center{
+	position: absolute;
+	top:50%;
+	left:50%;
+	width:100%;
+	text-align: center;
+	font-size: 18px;
+/* 	border: solid 1px blue; */
+	}
+
+</style>
+
+</head>
+<h3>이미지위에 텍스트 출력</h3>
+
+
+<body>
+<div class =container>
+<img src="../images/coffeehouse2.jpg" alt=""width="1000" src="300"></div>
+<div class="topLeft">Top Left</div>
+<div class="topLeft">Top Right</div>
+<div class="BottomLeft">Bottom Left</div>
+<div class="BottomRight">Bottom Right</div>
+<div class="center">center</div>
+
+</body>
+</html>

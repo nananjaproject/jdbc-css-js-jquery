@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<style>
+box{
+	border: 1px solid gray;
+	width: 100px;
+	height: 100px;
+	text-align:center;
+	}
+</style>
+</head>
+<body>
+<!-- <div>Box -1</div> -->
+
+<script>
+//js 사용해서 동적으로 div 요소*5 생성
+var div =document.createElement("div");
+/* <body요소> */
+ 
+div.innerText = "Box-1";
+/*
+div.style.border ="1px solid gray";
+div.style.width = "100px";
+div.style.height = "100px";
+div.style.text-algin="center";
+ div.style.textAlign ="center"; */  
+ 
+ //div.classList add("box")
+ div.className="box";
+ 
+document.body.appendChild(div);
+</script>
+
+</body>
+</html>

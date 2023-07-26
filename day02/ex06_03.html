@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+</head>
+<body>
+<style>
+box{
+	border: 1px solid gray;
+	width: 100px;
+	height: 100px;
+	text-align:center;
+	}
+</style>
+
+<style>
+	div:nth-of-type(1){
+	background-color: red;
+	position:static;
+	}
+	div:nth-of-type(2){
+	background-color: green;
+		position:relative; /* 기준 */
+		left: 20px;
+		top: 20px;
+	
+	}
+	
+	div:nth-of-type(3){
+	background-color: blue;
+		position:fixed;
+		/* 특징 페이지 스크롤되더라도 항상 같은 위치 유지 */
+	
+	}
+	div-last-of-type{
+	background-color: yellow;
+		position:absolute;
+	/* 	특징: 고정x 스크롤에 따라 함께 이동
+			기준- 지정된 조상 요소가 없으면 body요소가 기준 
+			일반 흐름에서 제거되면서 요소가 겹쳐질 수 있다*/
+		left: 20px;
+		top: 20px;
+	
+	}
+	
+	
+</style>
+
+
+
+
+</head>
+<body>
+<!-- <div>Box -1</div> -->
+
+<script>
+//js 사용해서 동적으로 div 요소*5 생성
+for (var i = 1; i <=5; i++) {
+	var div =document.createElement("div");
+	div.innerText = "Box-" +i;
+	 div.className="box";
+	 document.body.appendChild(div);
+}
+
+
+</script>
+
+</body>
+</html>
+</body>
+</html>

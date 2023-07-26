@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<script>
+
+
+//js 이벤트 처리
+//onclick = 함수 속성
+var pnl =document.querySelector("div#panel")
+var sw =false;
+
+document.querySelector("p.filp").onclick = function () {
+	if (!sw == false) {
+		pnl.style,display ="block";
+	} else {
+		pnl.style.display="none"
+	/* 	sw=false */
+	}sw=!sw;
+};
+
+	
+	
+
+</script>
+
+<style>
+#panel,.flip{
+ 	font-size: 16pxl;
+ 	padding: 10px;
+ 	background-color: #4acf50;
+ 	color: white;
+ 	text-align: center;
+ 	margin: auto;
+ 	border: 1px solid #a6d8a8;
+} 	
+ 	#panel{
+ 	display: none;
+}
+
+
+.filp:hover{
+	cursor: pointer;
+}
+
+
+</style>
+</head>
+<body>
+<p class="filp" >Click to show panel</p>
+<div id="panel">
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius architecto aperiam a corporis dignissimos? Quae id placeat quasi voluptate nihil sit error! Cum labore delectus dolore accusamus minus asperiores unde.</p>
+	<p>Vero odio ullam aperiam in cupiditate obcaecati error delectus blanditiis quae ipsam nisi corporis quas porro est doloremque veniam facilis modi cum dicta culpa repudiandae iusto beatae aliquid ducimus voluptatibus.</p>
+	<p>Dolor ducimus tempora sint deserunt eveniet ab delectus suscipit illo est ratione quas provident quam! Officia eius sit quas magnam quidem ut eum. Voluptates dolor quaerat expedita natus ea maxime.</p>
+</div>
+</body>
+</html>

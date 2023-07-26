@@ -1,0 +1,49 @@
+
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<script>
+
+	$("p.filp").click(function(){
+		/* $("#panel").toggle(); */
+		if (!sw) {
+			$("#panel").show();
+		} else {
+			$("#panel").hide();
+		}
+		sw = !sw;
+	});
+
+
+
+
+</script>
+
+<style>
+#panel,.flip{
+ 	font-size: 16pxl;
+ 	padding: 10px;
+ 	background-color: #4acf50;
+ 	color: white;
+ 	text-align: center;
+ 	margin: auto;
+ 	border: 1px solid #a6d8a8;
+} 	
+ 	#panel{
+ 	display: none;
+}
+
+
+.filp:hover{
+	cursor: pointer;
+}
+
+
+</style>
+</head>
+<body>
+
+
+</body>
+</html>

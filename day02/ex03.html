@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+<body>
+화면이 너무 작을경우 반응형 테이블에 가로 스크롤 막대를 표시
+<head>
+
+<style>
+table{
+	width:100%;
+	boder-collapse: collapse;
+	border: 1px solid gray;
+}
+
+th,td{
+	text-align:left;
+	padding:8px;
+	border:1px solid gray;
+}
+
+tr:nth-child(even){
+	background-color:#f2f2f2;	
+}
+
+div{
+	border: 1px solid red;
+	/* overflow: hidden; */
+	overflow: auto;
+	}
+
+
+</style>
+
+
+
+</head>
+
+
+
+<div>
+<table>
+	<tr>
+		<th>Lorem.</th>
+		<th>Laborum?</th>
+		<th>Blanditiis.</th>
+		<th>Nihil.</th>
+		<th>Quae!</th>
+		<th>Ipsa!</th>
+		<th>Nesciunt!</th>
+		<th>Magnam!</th>
+		<th>Praesentium?</th>
+		<th>Quia.</th>
+	</tr>
+	
+</table>
+</div>
+<!-- 
+css selector(선택자)
+:hover 의사클래스
+:not() 의사 클래스
+:first-child 의사클래스
+
+
+tr:hover:not(:first-child){
+	background-color:green;
+} -->
+</body>
+</html>
