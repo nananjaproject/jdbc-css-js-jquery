@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+</head>
+<body>
+<script>
+
+
+
+$("button").click(function(){
+// radio jquery selector ==input
+//     $(":radio[name='htmlapply']").each(function(i,element){
+//         console.log(i);
+//     });
+//     //alert 확인
+
+// if($(elem)){
+    // $(":checkbox[name=subject]").each(function(i,element)){
+    //     $("#demo").html(function(index,odhtml){
+    //         return odhtml+$(element).val()+"/"+$(element).next.text()
+    //         +"<br>";
+    //     }
+    // }
+    $(":checkbox[name=subject]:checked").each(function(i,element){
+    $("#demo").html(function(index,odhtml){
+          return odhtml+$(element).val()+"/"+$(element).next.text()
+
+
+
+    // $("#demo").html($("#msg").val());
+    // $("#demo").text($("#msg").val());
+
+
+</script>
+
+</body>
+</html>

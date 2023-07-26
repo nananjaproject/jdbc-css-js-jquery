@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href= "../images/SiSt.ico">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+</head>
+<style>
+    .st{
+       color: red;
+       display: inline-block;
+       width: 200px;
+       border: 1px solid gray;
+       }
+    #msg{
+       width: 100%;
+    }
+ </style> 
+
+
+<body>
+<fieldset>
+    <legend>html 적용 여부</legend>
+    <input type="radio"name="htmlapply"value="1"id="a"checked="checked"><label for="a">적용</label>
+    <input type="radio"name="htmlapply"value="2"id="b"><label for="b">미적용</label>
+</fieldset>
+<input type="text" id="msg" value="<span class='st'>홍길동</span>"/>
+<br>
+<button>실행</button>
+<br>
+<div id="demo"></div>
+
+<script>
+    $("button").click(function(){
+        //체크된 라디오버튼의 value 속성값을 알아오는 코딩
+        //적용했다면 1이 뜨고 미적용했다면 2가 뜸
+        var c_value = $(":radio[name='htmlapply']:checked").val();
+        //var c_value = $(":radio[name='htmlapply'].is(:checked").val();
+
+        /*
+    if($(":radio[name='htmlapply']")[0].checked){
+        $("#demo").html($("#msg").val());
+    } else { 
+        $("#demo").text($("#msg").val());
+    }
+    */
+    if(c_value==1){
+        $("#demo").html($("#msg").val());
+    } else { 
+        $("#demo").text($("#msg").val());
+    }
+    });
+
+    //https://api.jquery.com/attr/#attr-attributeName-value
+    
+</script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+</head>
+<body>
+<script>
+    document.querySelector("button").onclick=()=>{
+        //라디오 버튼 적용, 미적용 확인.
+    var radioAll = document.querySelectorAll("filedset[type=radio][name=htmlapply]");
+    // alert(radioAll.length)
+    for(var i=0; i<radioAll.length;i++){
+        console.log(radioAll[i].checked);
+    }
+        var msg =document.querySelector("#msg").value;
+        document.querySelector("#demo").innerTest=msg;
+    
+    if(radioAll[0].checked){
+        document.querySelector("#demo").innerHTML=msg;
+    }else{
+        document.querySelector("demo").innetext=msg;
+        
+    }
+    
+    
+    
+    };
+</script>
+
+</body>
+</html>
