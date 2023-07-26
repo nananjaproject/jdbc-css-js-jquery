@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>"2023. 4. 26.-오후 12:15:46"</title>
+<link rel="shortcut icon" type="image/x-icon" href="../images/SiSt.ico">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<style>
+
+</style>
+</head>
+<!-- onload 화면이 로드될떄, 메모리가 올라갈때 -->
+
+
+<input type="text" name="txtMessage" value="배고프다...">
+<br>
+<!-- <button onclick="btn_click()">입력</button> -->
+<button>입력</button>
+<br>
+
+<div id="demo"></div>
+
+<script>
+    //jquery coding
+    $(document).ready(function () {
+        //jquery object
+        //js innerHTML == jquery html()
+        $("#demo").html("RESULT : ");
+        // $("input[type=text] css selector");
+        // 위의 코드와 아래 코드는 똑같은 jquery 코드이다.
+        //:text는 jquery에서 사용되는 selector이다.
+        // $(":text[name=txtMessage]");
+        //val() value 속성값을 설정, 얻어오는 jquery method
+        $("input[name=txtMessage]").val("hungry"); //value 속성값을 설정하는 코딩
+
+
+        // $("태그명")
+        $("button").click(function(event) {
+            // alert("click");
+            var message = $("input[name=txtMessage]").val(); //value 속성값을 얻어오는 코딩
+            $("#demo").html(message);
+        })
+    }); //$(document).ready()
+</script>
+</body>
+</html>
