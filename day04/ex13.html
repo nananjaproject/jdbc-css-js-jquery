@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<style>
+div{
+width:100px;
+height:100px;
+background: red;
+
+
+/*      animation:sample 4s linear 3s 3 alternate;   */
+
+
+animation-name:sample;
+animation-duration:4s;
+animation-timing-function:linear;
+animation-iteration-count:3;
+animation-direction:alternate;/* ,reverse,alternate */
+/* 애니메이션 시작전, 종료후 요소의 스타일 */
+/* forward 마지막 키프레임 스타일유지
+backward 시작 키플레임 스타일 유지 */
+animation-fill-mode:backwards;
+position: relative;
+
+}
+
+@keyframes sample{
+	 0% {background-color: red;  left:0 ; top:0; }
+     25% {background-color: green;  left:200px ; top:0; }
+     50% {background-color: blue;  left:200px ; top:200px; }
+     75% {background-color: yellow;  left:0 ; top:200px; }
+     100% {background-color: red;  left:0 ; top:0;}
+     }
+/* 	from{ background-color:red; }
+	to{ bakground-color:yellow;}
+} */
+
+</style>
+
+
+
+</head>
+<body>
+<h3>css 애니메이션 </h3>
+
+<pre>
+js 또는 flash 사용하지 않고도
+html 요소의 애니메이션 처리 가능
+-애니메이션?
+한 스타일-> 점차 -> 다른 스타일로 변환되는 것
+-css 속성
+@keyframes 
+animation-name
+animation-duration
+animation-iterction
+animation-nameing-function
+animation-fill-mode
+animation 약식
+
+-키프레임(keyframe)?
+특정 시간에 가지는 요소의 스타일 
+키프+키프+키프+키프+키프+키프+키프+...
+</pre>
+
+<div></div>
+</body>
+</html>

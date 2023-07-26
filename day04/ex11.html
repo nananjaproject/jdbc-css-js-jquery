@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<style>
+div{
+	width: 300px;
+	height: 100px;
+	background-color:yellow;
+	border:1px solid black;
+}
+
+
+	div#demo{
+	/* transform:rotateX(150deg); */
+		transform:rotateX(180deg);
+}
+
+</style>
+
+
+</head>
+<body>
+<h3>3D 변환</h3>
+<pre>
+2D/3D 차이점 : x,y        +z
+transform 속성
+1)이동 : translate3d(x,y,z),
+translateXtranslateYtranslateZ
+2)회전 : rotateX()rotateY()rotateZ()
+3)크기 : scale()
+scaleX scaleY scaleZ
+4)기울기 : X
+
+matrix3d(....)
+
+
+
+<button>회전시작</button>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia ipsam atque omnis quaerat nesciunt placeat cum eos pariatur quae et enim ipsum architecto ut impedit iste at molestias error consequatur!</div>
+<div id="demo">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique rem officia omnis eum earum cupiditate sit quisquam quasi tempore saepe explicabo est pariatur inventore eaque illum at accusantium placeat maxime!</div>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+
+
+</pre>
+
+
+<script>
+
+
+var angle =1;
+var timer;
+document.querySelector("button").onclick=function(){
+/* setInterval(function (){
+	
+},ms) */
+
+timer = setInterval(()=>{
+	var target = document.querySelector("#demo");
+/* 	tatget.style.transform ="rotateY("+angle+"deg)"; */
+	tatget.style.transform ="rotateZ("+angle+"deg)";
+	angle++;
+},10);
+}
+	
+
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<style>
+   #rotate2D, #rotate3D{
+      width:80px;
+      height:70px;
+      color:white;
+      position:relative;
+      font-weight: bold;
+      font-size: 15px;
+      padding: 10px;
+      float: left;
+      margin-right:50px;
+      border-radius: 5px;
+      border:1px solid #000;
+      background-color: red;
+      margin:10px;  
+   }
+</style>
+
+
+</head>
+<body>
+<h3>2D,3D 비교</h3>
+<div style="height: 80px;">
+   <div id="rotate2D"  onmouseover="rotateDiv1();">2D rotate</div>
+   <div id="rotate3D"  onmouseover="rotateDiv2();">3D rotate</div>
+</div>
+
+<script>
+
+
+ var div2D =document.querySelector("#rotate2D");
+ var div3D =document.querySelector("#rotate3D");
+ var timer2D, timer3D;
+ var angle2D =0, angle3D =0;
+ 
+function rotationDiv1(){
+	clearinterval(timer2D); //이전 회전 중인 동작 멈춤.
+	
+	timer2D= setinterval(function(){
+		div2D.style.transform="rotate("+(angle2D++)+"deg)";
+				
+		if(angle2D == 180 || angle2D == 260){
+			clearinterval(timer2D);
+			
+		if(angle2D == 260) angle2D=0;
+		}
+		
+	},10);
+}
+
+function rotationDiv2(){
+	clearinterval(timer2D); //이전 회전 중인 동작 멈춤.
+	
+	timer2D= setinterval(function(){
+		div2D.style.transform="rotateX("+(angle3D++)+"deg)";
+				
+		if(angle3D == 180 || angle3D == 260){
+			clearinterval(timer3D);
+			
+		if(angle3D == 360) angle3D=0;
+		}
+		
+	},10);
+}
+
+
+
+
+
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+<style>
+a{
+color:yellow;
+}
+
+
+p>a{ /* 1+1 */
+	color:green;
+
+}
+
+p> a.button{ /* 1 + 1 +10 */
+color:blue;
+
+}
+
+p> a.button{ /* 1 + 1 +10 */
+color:blue;
+
+}
+
+
+
+#mydiv p >a{/*  100+1+1 */
+
+}
+
+a{
+color:red;
+}
+
+
+
+
+a{
+color: black !important;
+}
+
+</style>
+
+
+
+</head>
+<body>
+<h3>css 특이성(특수성)</h3>
+
+<pre>
+css+동일한 요소를 여러 개의 css 규칙이 적용될 때 
+우선순위 결정시 사용되는 특성: 특이성
+특이성은 점수로 정해진다
+
+1.인라인식 스타일 시트 적용방법 1000점
+2. *              0점
+	태그명, 의사요소 : 1점
+	클래스명, 의사클래스명, 속성선택자:10점
+	#아이디명:              100점
+	
+	예)
+	#navbar p#demo         : 100+1+100
+	{
+	color:red;
+	}
+	#demo                  :100
+	{
+	color:blue
+	}
+	
+	
+	예외
+	!important 규칙
+	행당 요소의 특정 속성에 대한 모든 이전 스타일 재정의한다
+<p>
+   <a href="#" class="button">button 1</a>
+</p>
+
+<div id="mydiv">
+   <p>
+      <a href="#" class="button">button 2</a>
+   </p>
+   <p>
+      <a href="#" class="button" style="color:black">button 3</a>
+   </p>
+</div>
+
+
+</pre>
+</body>
+</html>

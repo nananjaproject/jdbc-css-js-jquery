@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<Style>
+	#grad1{
+	width:200px;
+	height:150px;
+	/* 방향 생략: 기본 위-> 아래로 */
+	/* background-image:linear-gradient(to right, red, yellow); */
+	
+	
+	/* 각도 사용해서 방향 */
+/* 	0deg to top */	
+/* 	90deg to right */
+/* 180 deg to bottom */
+/* 	background-image:linear-gradient(180 deg, red, yellow);
+	} */
+	
+	/* 방사형 */
+/* 	background-image: radial-grdient(shape size 위치, 색...) */
+	
+/* /* background-image: radial-grdient(red, yellow, green); */ 
+/* 타원(기본값)
+원 */
+
+background-image: radial-grdient(circle, red 5%,  yellow 10%, green 60%);
+</Style>
+
+
+</head>
+<body>
+<h3>그라디언트 효과</h3>
+<pre>
+최고 2개 이상의 색상간에 부드러운 변화(전환)
+빨           ->    노 
+1) 선형
+ 	background-image:liner-gradient(방향, 색1, 색2...))
+2) 방사형
+3) 원추형
+</pre>
+<div id="grdi1"></div>
+
+
+</body>
+</html>

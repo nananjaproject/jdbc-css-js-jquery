@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<style>
+/*  가로쓰기 모드 */
+p.test1{
+	write-mode:horizontal-tb;
+}
+/* 세로쓰기 모드 */
+p.test3{
+	write-mode:vertical-rl;
+}
+p.test2>span{
+	write-mode:vertical-rl;
+}
+
+
+</style>
+
+
+
+</head>
+<body>
+
+
+<p>
+	<p class ="test1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita sit modi sunt nemo delectus cumque maiores iste tempora quibusdam placeat ipsa nam alias velit dicta autem laborum quo suscipit error!</p>
+	<p class ="test2">Placeat <span>cumque</span> facere assumenda fugiat repellendus odio eum cupiditate commodi nemo veritatis molestias adipisci libero quis culpa vitae eaque sed repudiandae ex excepturi voluptatibus ipsum quia ullam animi soluta maxime.</span>
+	<p class ="test3">Harum debitis perferendis praesentium iure sed dolor iusto. Saepe officiis a nemo fuga dicta modi rerum ipsam. Cumque consequatur rerum ut possimus voluptatem harum reiciendis explicabo error quos illum illo.</span>
+</p>
+</body>
+</html>

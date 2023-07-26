@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<style>
+p{
+	width: 200px;
+	border: 1px solid black;
+	}
+
+ p.test1{
+ 	white-space: nowarp;
+ 	overflow:hidden;
+ 	text-overflow: clip;  /* 잘라내다 */
+ }
+ 
+ 
+  p.test2{
+ 	white-space: nowarp;
+ 	overflow: hidden;
+ 	text-overflow: ellipsis;  /* 생략하다 */
+ }
+ 
+ p.test2:hover{
+ 	overflow:visible;
+ }
+ 
+ 
+ p.test3{
+ word-warp:break-word;
+ 
+ word-break:break-all;}
+</style>
+</head>
+<body>
+<h3>css 텍스트효과</h3>
+<pre>
+
+1.text oveflow
+2.word-wrap 자동줄바꿈
+
+
+
+</pre>
+
+
+
+<p class="test1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum facilis.Expedita eius veniam officiis dolorem ea consequatur fuga. Ipsa culpa!Et placeat totam doloribus dignissimos cupiditate mollitia obcaecati quod ab.</p>
+<p class="test2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum facilis.Expedita eius veniam officiis dolorem ea consequatur fuga. Ipsa culpa!Et placeat totam doloribus dignissimos cupiditate mollitia obcaecati quod ab.</p>
+<p class="test3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum facilis.Expedita eius veniam officiis dolorem ea consequatur fuga. Ipsa culpa!Et placeat totam doloribus dignissimos cupiditate mollitia obcaecati quod ab.</p>
+</body>
+</html>

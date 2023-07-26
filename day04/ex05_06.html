@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<style>
+div{
+border: 10px dotted black;
+padding: 35px;
+background: yellow url('../images/img_flwr.gif')no-repeat;
+}
+
+
+#demo1{
+bakground-origin: padding-box;
+background-clip: padding-box;
+}
+
+#demo2{
+bakground-origin: border-box;
+background-clip: border-box;
+}
+
+
+#demo3{
+bakground-origin: content-box;
+background-clip: content-box;
+}
+
+
+
+</style>
+
+
+</head>
+<body>
+<h3>background-orgin 속성</h3>
+<pre>
+1.background-origin 속성: 배경이미지 위치 지정
+-테두리 왼쪽 상단 border-box
+-패딩 왼쪽 상단 padding-box
+-콘텐츠 왼쪽 상단 content-box
+1.2 background-position 속성 배경 이미지의 위치 지정
+
+2.background-clip 속성
+-배경의 페인팅 ㅇ영역을 지정하는 속성
+boder-box 배경이 테두리의 바깥쪽 가장자리에 그려진다
+padding-box 배경이 패딩의 바깥쪽 가장자리에 그려진다
+content-box- 콘텐츠 상자내에서 ..
+(#demo$>h1>lorem5^p>lorem15)*3
+<div id="demo1">
+	<h1>Lorem ipsum dolor sit amet.</h1>
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam odio minima aliquid voluptatum aperiam illum.</p>
+</div>
+<div id="demo2">
+	<h1>Eum explicabo qui eius iusto!</h1>
+	<p>Laborum delectus quia ipsum animi molestias excepturi nemo dignissimos veniam culpa tempora repellat nam numquam.</p>
+</div>
+<div id="demo3">
+	<h1>Molestias quaerat impedit numquam quas.</h1>
+	<p>Fugiat est libero doloremque beatae eveniet porro expedita tenetur facilis odio eligendi. Adipisci optio dolorum?</p>
+</div>
+
+</pre>
+</body>
+</html>
