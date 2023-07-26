@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>2023. 4. 24. 오후 12:14:09</title>
+<link rel="shortcut icon" type="image/x-icon" href="../images/SiSt.ico">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<style>
+   p{
+      display: none;
+      background-color: yellow;
+      padding:20px;
+   }
+    
+   div:hover  p{
+     display: block;
+   }
+</style>
+</head>
+<body>
+<pre>
+   [:의사클래스]
+   - 요소의 특정 상태 정의
+   - 텍스트박스에 포커스  
+            input[type=text]:focus
+                                         a:hover
+                                         
+   - 형식
+        선택자(selector).pseudo-class{
+           속성명:속성값;
+           속성명:속성값;
+             :
+        }
+    -  순서 지키자
+       a:link
+       a:visited
+       a:hover
+       a:active    
+    - 예)
+     :focus,   :hover    
+     :first-child
+     :not(selector)
+     :checked,    :empty  :first-of-type  :invalid  :in-range
+     :lang()   :last-child  :last-of-type,  :nth-child(n)
+     :nth-last-child(n)   :only-child  :optional
+     :out-of-range  :read-only  :read-write  :required
+     :root  :target  :valid
+     등등
+          
+</pre>
+
+
+<div>
+    Lorem ipsum dolor sit amet, consectetur adipisicing.
+    <p>Lorem ipsum dolor.</p>
+</div>
+
+</body>
+</html>
+
+
+
+
+
+
+

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>2023. 4. 24. 오전 9:31:39</title>
+<link rel="shortcut icon" type="image/x-icon" href="../images/SiSt.ico">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<style>
+  body{
+     font-family: Arial, Verdana, sans-serif;
+  }
+  *{
+    box-sizing: border-box;  
+  }
+  
+  .open-button{
+     background-color: #555;
+     color:white;
+     padding: 16px 20px;
+     border: none;
+     cursor: pointer;
+     opacity: 0.8;
+     
+     position: fixed;
+     right: 28px;
+     bottom: 23px;
+     
+     width: 280px;
+  }
+  
+  .form-popup{
+     display:none;
+  
+     border: 3px solid #f1f1f1;
+     position: fixed;
+     bottom: 0;
+     right: 15px;
+     z-index: 10;
+  }
+  
+  .form-container{
+    max-width: 300px;
+    padding: 10px;
+    background-color: white;
+  }
+  
+  /* 10:03 수업시작 */
+  .form-container input[type=text] 
+  , .form-container input[type=password]{
+    width: 100%;
+    margin: 5px 0 22px 0;
+    border:none;
+    background-color: #f1f1f1;
+    padding: 15px;
+  }
+  /* :의사클래스     포커스  특정 상태 */
+  .form-container input[type=text]:focus
+  , .form-container input[type=password]:focus{
+      background-color: #ddd;
+      outline: none;
+  }
+  
+  .form-container  .btn{
+     background-color: #4caf50;
+      color:white;
+      padding:16px 20px;
+      border:none;
+      cursor:pointer;
+      width:100%;
+      margin-bottom: 10px;
+      opacity: 0.8;
+  }
+  
+  .form-container  .btn:hover, .open-button:hover{
+    opacity: 1;
+  }
+  
+  .form-container  .btn.cancel{
+     background-color:red;
+  }
+</style>
+</head>
+<body>
+<h3>팝업(popup) 폼(form)</h3>
+
+<button class="open-button" >Open Form</button>
+
+<!-- #myForm.form-popup -->
+<div class="form-popup" id="myForm">
+  <form action="" class="form-container" autocomplete="off">
+    <h1>Login</h1>
+
+    <label for="email"><b>Email</b></label>
+    <input type="text" placeholder="Enter Email" 
+    name="email" required>
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" 
+    name="psw" required>
+
+    <button type="submit" class="btn">Login</button>
+    <button type="button" class="btn cancel">Close</button>
+  </form>
+</div> 
+
+<script> 
+  document.querySelector(".form-container .btn.cancel").onclick = function (){
+	  // alert("test");
+	  document.querySelector("#myForm").style.display = "none";
+	  // email, password 초기화
+	  document.querySelector(".form-container input[name=email]").value = "";
+	  document.querySelector(".form-container input[name=psw]").value = "";
+  }
+   // js                                          css selector
+   document.querySelector("button.open-button").onclick 
+   = function (){
+	   // alert("test");
+	   document.querySelector("#myForm").style.display = "block";
+	   // js 함수 :   focus()
+	   document.querySelector(".form-container input[name=email]").focus();
+   };
+   
+</script>
+ 
+</body>
+</html>
+
+
+
+
+
+
+
+
+

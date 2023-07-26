@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>2023. 4. 24. 오후 4:18:03</title>
+<link rel="shortcut icon" type="image/x-icon" href="../images/SiSt.ico">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<style>
+  button{
+    background-color: red;
+  }
+  
+  /* 
+  :의사클래스 X
+  button:hover{
+     background-color: blue;
+  }
+   */
+</style>
+</head>
+<body>
+
+<button>마우스 롤오버효과</button>
+<button>마우스 롤오버효과</button>
+<button>마우스 롤오버효과</button>
+
+<script>
+    // js 처리
+    // 1. document.getElementById("아이디명");
+    // 2. document.querySelector("#아이디명");
+    //     첫 번째 버튼 : document.querySelector("button");
+    
+    // var btns =  document.querySelectorAll("button");    
+    var btns = document.getElementsByTagName("button");
+    // alert( "btn 수 : " +   btns.length  );  // 3
+    
+    for (var i = 0; i <  btns.length; i++) {
+    	
+    	//btns[i].onclick = function (){
+    		// alert(    i  );  ***
+    	//}
+    	
+    	// mouseover 이벤트
+    	btns[i].onmouseover = function (){
+    		// console.log( "마우스 오버 이벤트 발생함...")
+    		// js 이벤트가 발생할 때 모든 이벤트 정보를  event 객체
+    		event.srcElement.style.backgroundColor = "blue";
+    	}
+    	// mouseout 이벤트
+    	btns[i].onmouseout = function (){
+    		// console.log( "마우스 아우트 이벤트 발생함...")
+    		event.srcElement.style.backgroundColor = "red";
+    	}
+		
+	} // for
+    
+    
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+

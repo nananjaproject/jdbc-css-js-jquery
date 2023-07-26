@@ -1,0 +1,130 @@
+
+2.  버튼 3개 선언 후 클릭 이벤트 처리해서 경고창을 띄우세요.. 
+  ㄱ. onclick 속성
+  ㄴ. js 동적으로 이벤트 등록
+  ㄷ. jquery 사용
+    
+3. 위의 버튼이 클릭되면 class 속성을 active 로 설정 후 임의의 스타일 지정
+
+
+4.   document.querySelectorAll("button")
+      document.querySelector("button") 
+    위의 두 함수와 코딩에 대해서 설명하세요.
+    
+        
+5. tr:hover:not(:first-child){
+     background-color: #4caf50;
+  }
+  코딩에 대해서 설명하세요.  
+
+6. display="none"          
+    visibility="hidden"     
+   위의 두 속성의 차이점을 설명하세요.
+
+7. jquery  메서드 설명
+  ㄱ. css()     
+  ㄴ. show()  
+  ㄷ. hide() 
+  ㄹ. toggle()   
+  ㅁ. slideToggle()
+  ㅂ. addClass()   
+  ㅅ. removeClass()   
+  
+8.  position(위치) 속성에 대해 설명하세요.
+  ㄱ. static   
+  ㄴ. relative 
+  ㄷ. fixed    
+  ㄹ. absolute   
+  ㅁ. sticky    
+  
+9-1. [ DOM ]을  사용해서 (js를 사용) <button> 요소를 10개 동적으로 생성하고
+      버튼을 클릭하면 숨기도록 코딩하세요..
+          
+9-2. 위의 문제8번을 jquery로 코딩해 보세요...
+
+10-1. 아래 코딩에 대해서 각 라인 별로 주석을 달아서 설명하세요 
+
+<div class="topnav">
+   <a href="#"></a>
+   <a href="#"></a>
+   <a href="#"  class="active"></a>
+   <a href="#"></a>
+</div>
+
+
+<script>   
+                                                                      
+  var links = document.querySelectorAll(    "div.topnav a"    );  
+  links.length = 4
+  for (var i = 0; i < links.length; i++) {
+	   links[i].onclick = function (){ 
+		   for (var i = 0; i < links.length; i++) { 
+			  links[i].classList.remove("active");
+		  }  
+		   this.classList.add("active");
+	   };
+  }
+</script>
+
+10-2. 위의 10-1번 문제를 jquery로 코딩하세요. 
+
+11. 아래 js코딩에 대해서 각 라인 별로 주석을 달아서 설명하세요
+
+1 2 3 4 5 6 [7] 8 9 >  >>
+
+<style>
+   .active{
+      back
+      col
+   }
+</style>
+
+<div class="pagination">
+   <a>1</a>
+   <a  class="active">[2]</a>
+   :
+</div> 
+ 
+<script>
+
+
+    $(".pagination a").click(function(event) { 
+    	$(".pagination a").not(this).removeClass("active"); 
+    	$(this).addClass("active");
+    });
+</script>
+
+12.  아래  css코딩을 설명하세요.
+  #mySidenav a{
+    transition:0.5s ease;
+  }
+        
+    <button>버튼 1</button>
+    
+    <style>
+	  button{
+	    width:100px;
+	    border:1px solid gray;
+	    
+	    transition:0.5s ease;
+	  }
+	  
+	  button:hover{
+	    width:200px; 
+	    
+	  }
+	</style>
+        
+13.  "문제01_결과.png"   css 적용하세요 .
+    - 수업 자료 참조하지 말고 html, css, 등 모든 코딩을 해 보세요~
+    - 마지막에 문제 푸세요~        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        

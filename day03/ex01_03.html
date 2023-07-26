@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>2023. 4. 24. 오전 9:18:34</title>
+<link rel="shortcut icon" type="image/x-icon" href="../images/SiSt.ico">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<style>
+  *{
+      box-sizing: border-box;
+  }
+
+  .box{
+     width: 33.33%;
+     float: left;
+     height: 200px;
+     padding: 30px;
+  }
+  
+  /* 
+  :의사 클래스
+  ::의사요소 
+  */
+  .clearfix::after{
+     content: "";
+     display: table;
+     clear: both;
+  }
+</style>
+</head>
+<body>
+<h3>동일 폭 상자(div) / 상자 그리드</h3>
+<!-- CSS Flexbox 속성을 사용해서 레이아웃 모듈 -->
+
+<!-- .clearfix>.box*3>p>lorem4 -->
+<div class="clearfix">
+	<div class="box" style="background-color: #bbb">
+		<p>Lorem ipsum dolor sit.</p>
+	</div>
+	<div class="box" style="background-color: #ccc">
+		<p>Suscipit commodi quaerat ipsa.</p>
+	</div>
+	<div class="box" style="background-color: #ddd">
+		<p>Quidem officia excepturi nam.</p>
+	</div>
+</div>
+
+<!-- p>strong{Note: }+lorem -->
+<p>
+ <strong>Note: </strong>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit ipsam perferendis doloremque quibusdam distinctio fugit fuga praesentium ratione dignissimos nihil quia animi magni optio reprehenderit non accusantium ipsa pariatur nisi!
+</p>
+</body>
+</html>
+
+
+
+
+
+
+

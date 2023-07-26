@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>2023. 4. 24. 오후 12:40:57</title>
+<link rel="shortcut icon" type="image/x-icon" href="../images/SiSt.ico">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<style>
+   /* p::first-letter{ */
+   p::first-line{
+       color:red;
+       font-variant: small-caps;
+   }
+   
+   /* 요소의 content(내용) 앞에 일부 내용을 삽입 */
+   h3::before{
+      content: url('../images/arr.gif');
+   }
+   
+   /* 요소의 content(내용) 뒤에 일부 내용을 삽입 */
+   h3::after{
+      content: url('../images/arr.gif');
+   }
+   
+   ::selection{
+       color:red;
+       background: yellow;
+   }
+</style>
+</head>
+<body>
+
+ <h3>Lorem ipsum dolor sit amet.</h3>
+
+<pre>
+  :의사 클래스       -  요소의 "특정 상태"
+  
+  [ ::의사요소 ] - 요소의 "지정된 부분"에 스타일 설정
+  선택자(selector)::의사요소{
+         속성명:속성값;
+         속성명:속성값;
+           :
+  }
+  1)::first-letter   첫 한 문자 지정
+  2)
+    :
+</pre>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia nihil ea harum excepturi fuga id tempora repudiandae magnam voluptatum earum sint necessitatibus dolorum provident iusto maiores ab neque qui reiciendis.</p>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+

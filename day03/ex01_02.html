@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>2023. 4. 24. 오전 9:07:49</title>
+<link rel="shortcut icon" type="image/x-icon" href="../images/SiSt.ico">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<style>
+   div{
+      border: 3px solid #4caf50;
+      padding: 5px;
+      /* 
+       포함요소(img)가 컨테이너(div) 외부로 넘치게 되면
+       해결 
+       */ 
+       /* overflow: auto; */
+   }
+   
+   .clearfix::after{
+      content: "";
+      display: table;
+      clear: both;
+   }
+   
+   div > img.img1{
+      float: left; 
+   }
+</style>
+</head>
+<body>
+
+<!-- div>img.img1+lorem12 -->
+<div class="clearfix">
+  <img src="../images/pineapple.jpg" alt="" class="img1"
+   width="170"  height="170" 
+  />
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia eaque minima ut.
+</div>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+

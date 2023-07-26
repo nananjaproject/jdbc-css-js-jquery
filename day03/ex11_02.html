@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>2023. 4. 24. 오후 2:38:42</title>
+<link rel="shortcut icon" type="image/x-icon" href="../images/SiSt.ico">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<style>
+  *{     
+      box-sizing: border-box;
+   }
+   body{
+     font-family: Arial;
+     border:1px solid red;
+     padding:20px;
+     
+     max-width: 800px;
+     margin: 0 auto;
+     height: 100%;
+   }
+   
+   /* ::의사요소 */
+   .row::after{
+      content:"";
+      clear:both;
+      display: table;
+   }
+   
+   .side{
+     float: left;
+     width:15%;
+     margin-top: 10px;
+   }
+    .middle{
+     float: left;
+     width:70%;
+     margin-top: 10px;
+   }
+   
+   .middle  .bar-container{
+       width: 100%;
+	     background-color: #f1f1f1; 
+	     text-align: center;
+	     color:white;
+   }
+   .right{
+      text-align: right;
+   }
+</style>
+<style>
+    /* 막대그래프 그리기 3:02 수업시작*/
+    /* bar-1 */
+    .bar-1{
+      background-color: #f44336;
+      height: 18px;
+      width: 20%;
+    }
+    /* bar-2 */
+    .bar-2{
+      background-color: #3296f3;
+      height: 18px;
+      width: 15%;
+    }
+    /* bar-3 */
+    .bar-3{
+      background-color: #00bcd4;
+      height: 18px;
+      width: 80%;
+    } 
+    /* bar-4 */
+    .bar-4{
+      background-color: #ff9800;
+      height: 18px;
+      width: 75%;
+    }
+    /* bar-5 */
+    .bar-5{
+      background-color: #4caf50;
+      height: 18px;
+      width: 45%;
+    }
+</style>
+</head>
+<body>
+<h3>설문조사 - (보기) 막대그래프 </h3>
+<div class="row">
+
+    <div class="side">
+   	   <div>1 star</div>
+    </div> 
+    <div class="middle">   
+	   	<div class="bar-container">   
+	   		<div class="bar-1"></div>
+	   	</div>
+   </div> 
+   <div class="side right">
+   	  <div>20</div>
+   </div>
+
+    <div class="side">
+   	   <div>2 star</div>
+    </div> 
+    <div class="middle">   
+	   	<div class="bar-container">   
+	   		<div class="bar-2"></div>
+	   	</div>
+   </div> 
+   <div class="side right">
+   	  <div>15</div>
+   </div>
+    
+    <div class="side">
+   	   <div>3 star</div>
+    </div> 
+    <div class="middle">   
+	   	<div class="bar-container">   
+	   		<div class="bar-3"></div>
+	   	</div>
+   </div> 
+   <div class="side right">
+   	  <div>80</div>
+   </div>
+
+    <div class="side">
+   	   <div>4 star</div>
+    </div> 
+    <div class="middle">   
+	   	<div class="bar-container">   
+	   		<div class="bar-4"></div>
+	   	</div>
+   </div> 
+   <div class="side right">
+   	  <div>75</div>
+   </div>
+
+    <div class="side">
+   	   <div>5 star</div>
+    </div> 
+    <div class="middle">   
+	   	<div class="bar-container">   
+	   		<div class="bar-5"></div>
+	   	</div>
+   </div> 
+   <div class="side right">
+   	  <div>45</div>
+   </div>
+
+
+</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
