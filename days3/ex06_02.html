@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="icon"type="image/x-icon"href="../images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<style>
+/* p:first-child{ 여러 태그들중에서 무조건 처음에 있는 p 태그 다른 태그에 밀려서 밑에 있는 태그X*/
+p:first-of-type{ /*자식의 처음 만나는 p 태그*/
+	color:blue;
+}
+/*p:last-child{*/
+p:last-of-type { /*어디에 있든 마지막에 있는 p 태그*/
+	color:red;
+}
+
+p:nth-child(2) {
+	background-color: yellow;
+	/*<div>2-div</div> 이건 해당X*/
+	/*<p>Doloremque quam quaerat sit repudiandae.</p>*/
+}
+
+p:nth-of-type(2) {
+	background-color: green;
+	/*<p>Beatae incidunt maxime impedit illo!</p> body 안의 p태그중에서 두번째것*/
+	/*  <p>Deleniti expedita iusto ad nemo.</p> div 안의 p태그중에서 두번째것 */
+}
+
+/*p:nth-last-child(1) {}*/
+/*p:nth-last-of-type(1) {}*/
+	
+</style>
+</head>
+<body>
+<div>first-div</div> 
+<!-- 추가 body 태그의 첫번째 자식은 div이므로 p:first-child 여기에 걸리는 애가 없음-->
+<div>2-div</div>
+<!-- p*5>lorem5 -->
+<p>Lorem ipsum dolor sit amet.</p> <!-- body 태그의 첫번째 p first-child -->
+<p>Beatae incidunt maxime impedit illo!</p>
+
+<div>
+<span>111</span> <!-- 추가 -->
+	<p>Doloremque quam quaerat sit repudiandae.</p> <!-- div 태그의 첫번째 p first-child -->
+	<p>Deleniti expedita iusto ad nemo.</p> <!-- div 태그의 last-child -->
+<span>999</span> <!-- 추가 -->
+</div>
+
+<p>Necessitatibus est pariatur blanditiis eius.</p> <!-- body 태그의 last-child -->
+
+<div>last-div</div> 
+<!-- 추가 body 태그의 마지막 자식은 div이므로 p:last-child 여기에 걸리는 애가 없음-->
+
+</body>
+</html>

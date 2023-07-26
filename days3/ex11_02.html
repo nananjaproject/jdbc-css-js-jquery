@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>2023. 4. 28. 오후 4:45:15</title>
+<link rel="shortcut icon" type="image/x-icon" href="../images/SiSt.ico">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<style>
+   .active{
+      color:red;
+      background-color: yellow;
+   }
+</style>
+</head>
+<body>
+팀원 이름 입력 :  <input type="text"  id="name"  name="name"  onkeyup="teamAdd(this);">
+<br>
+<p id="demo">
+</p>
+<select  multiple="multiple"  size="5"></select>
+
+<script>
+   function teamAdd( tbox ){
+	   
+	   if (  event.keyCode == 13  ) {
+		   // 이전 newdiv 클래스 속성 active 제거
+		   
+		   
+		   var name =  tbox.value;
+		   var newdiv = document.createElement("div");
+		   newdiv.innerText = name;
+		   newdiv.classList.add("active");
+		   document.getElementById("demo").appendChild(newdiv);
+	  } // if
+	   
+   }
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+

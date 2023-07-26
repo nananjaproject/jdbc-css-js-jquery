@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>2023. 4. 28. 오후 3:13:05</title>
+<link rel="shortcut icon" type="image/x-icon" href="../images/SiSt.ico">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+<style>
+  #demo{
+     width: 300px;
+     height: 200px;
+     border:1px solid gray;
+     overflow: auto;
+  }
+</style>
+
+</head>
+<body>
+ 
+
+<script>  
+   // jquery 수정.
+   var  $sel =  $("<select id='itemCount'></select>")  ;
+   for (var i = 1; i <= 15 ; i++) {
+	   $sel.append(  $("<option value='"+i+"'>"+i+"</option>")  );
+   } // for   
+   $("body").append( $sel   );
+   // 
+   $pdemo    = $("<p id='demo'></p>");
+   $("body").append( $pdemo      );
+   // 
+   /*
+   $sel.change(function(event) {
+	   let count = $(this).val();
+	   $pdemo.html("");
+	   
+	   for (var i = 0; i < count ; i++) { 
+   		// 동적으로 input type="text" 요소 생성
+   		$pdemo.append( "항목 " + (i+1) + " : "
+   				, 	$( "<input type='text' name='item"+i+"' class='box'><br>")   );   
+       	
+		} // for
+	  
+   });
+   */
+  
+</script>
+
+</body>
+</html>
+
+
+
+
+
+

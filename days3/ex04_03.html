@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="icon"type="image/x-icon"href="../images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<style>
+	.center{
+		border: 3px solid green;
+		text-align: center;
+		width: 50%;
+		margin: auto; /*텍스트와 div 모두 가운데로*/
+
+		height: 200px;
+		position: relative; /*.center 여기가 기준이 됨*/
+	}
+	
+	.center p{
+		position: absolute; 
+		top: 50%;
+		left: 50%;
+		
+		margin: 0;
+		transform: translate(-50%, -50%); 
+		/*상자의 왼쪽 위의 꼭지점이 중앙에 있는데 그 원점을 이동시키는 코딩*/
+	}
+
+</style>
+</head>
+<body>
+<h3>수직으로 가운데 정렬</h3>
+<div class="center">
+	<p>hello world!</p>
+</div>
+</body>
+</html>

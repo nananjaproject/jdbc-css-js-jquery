@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="icon"type="image/x-icon"href="../images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<style>
+body{
+	font-family: Arial, Verdana, sans=serif;
+}
+*{
+	box-sizing: border-box;
+}
+
+.open-button{
+	background-color: #555;
+	color: white;
+	padding: 16px 20px;
+	border: none;
+	cursor: pointer; /*마우스 올리면 손가락 모양으로 바뀜*/
+	opacity: 0.8;
+	
+	position: fixed;
+	right: 28px;
+	bottom: 23px;
+	
+	width: 280px;
+}
+
+.form-popup{
+	display: none; /*안보이게*/
+	
+	border: 3px solid #f1f1f1;
+	position: fixed;
+	bottom: 0;
+	right: 15px;
+	z-index: 10; /*맨위에 올라가는*/
+}
+
+.form-container{
+	max-width: 300px;
+	padding: 10px;
+	background-color: white;
+}
+
+.form-container input[type=text]
+,.form-container input[type=password]{
+	width: 100%;
+	margin: 5px 0 22px 0;
+	border: none;
+	background-color: #f1f1f1;
+	padding: 15px;
+}
+/*:의사클래스 포커스 특정 상태*/
+.form-container input[type=text]:focus
+,.form-container input[type=password]:focus{
+	background-color: #ddd; /*클릭하면 좀더 진한 색깔로 변함*/
+	outline: none;
+}
+
+.form-container .btn{
+	background-color: #4caf50;
+	color: white;
+	padding: 16px 20px;
+	border: none;
+	cursor: pointer;
+	width: 100%;
+	margin-bottom: 10px;
+	opacity: 0.8;
+}
+
+.form-container .btn:hover, oopen-button:hover{
+	opacity: 1;
+}
+
+.form-container .btn.cancel{
+	background-color: red;
+}
+</style>
+</head>
+<body>
+<h3>팝업(popup)폼(form)</h3>
+<!-- 시험!!!!!!!! -->
+<button class="open-button">Open Form</button>
+    
+<!-- #myForm.form-popup -->
+<div class="form-popup" id="myForm">
+  <form action="" class="form-container" autocomplete="off">
+    <h1>Login</h1>
+
+    <label for="email"><b>Email</b></label>
+    <input type="text" placeholder="Enter Email" 
+    name="email" required>
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" 
+    name="psw" required>
+
+    <button type="submit" class="btn">Login</button>
+    <button type="button" class="btn cancel">Close</button>
+  </form>
+</div>
+<script> //시험
+	//js					css selector
+	document.querySelector("button.open-button").onclick
+	=function(){
+		//alert("test");
+		document.querySelector("#myForm").style.display="block";
+		//js 함수: focus()  -커서를 깜빡깜빡거리게
+		document.querySelector(".form-container input[name=email]").focus();
+};
+
+//document.querySelector(".aa .bb") aa(부모)안의 bb(후손)
+//document.querySelector(".aa.bb") aa도 가지고 bb도 가지고
+
+//close 누르면 닫힘
+document.querySelector(".form-container .btn.cancel").onclick=function(){
+	//alert("test");
+	document.querySelector("#myForm").style.display="none";
+	//닫을때 그전에 입력한 email, password 초기화
+	document.querySelector(".form-container input[name=email]").value="";
+	document.querySelector(".form-container input[name=psw]").value="";
+}
+
+</script>
+</body>
+</html>

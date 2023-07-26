@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>2023. 4. 28. 오후 12:42:09</title>
+<link rel="shortcut icon" type="image/x-icon" href="../images/SiSt.ico">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+</head>
+<body>
+좋아하는 과목 선택하세요 ?
+<br>
+<select name="subject" id="subject">
+	<option value="" >선택하세요.</option>
+	<option value="kor">국어</option>
+	<option value="eng">영어</option>
+	<option value="mat">수학</option>
+	<option value="pe">체육</option>
+</select> 
+
+<p id="demo"></p>
+
+<script>
+   // select 태그의 change 이벤트
+   document.getElementById("subject").onchange = function (){
+	   // alert("change");
+	   let idx =  this.selectedIndex;
+	   if( idx == 0 ){
+		   alert(  "선택하세요~" );
+		   return ;
+	   }
+	   // alert( idx  );   0/1/2/3/4
+	   // this.options 속성 ->  HTMLCollection
+	   let value = this.options[idx].value;
+	   let text = this.options[idx].text;
+	   document.getElementById("demo").innerHTML =
+		   value +" /  " + text;
+   }
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

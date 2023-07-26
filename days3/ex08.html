@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>2023. 4. 28. 오후 12:13:05</title>
+<link rel="shortcut icon" type="image/x-icon" href="../images/SiSt.ico">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+</head>
+<body>
+<input type="text"  id="age"  value="20">
+<button>실행</button>
+<p id="demo"></p>
+<script>
+ document.querySelector("button").onclick = function (){
+	 // 18 이상 :      old
+	 //     미만 :      young
+	 // 문자열 "20"  -> 20 변환 함수 : parseInt(), Number()
+	 let age = Number( document.getElementById("age").value );
+	 // let age =  document.getElementById("age").value  ;
+	 // alert( typeof  age ); // number, string
+	 // js 정규표현식 : 체크 X RegExp
+	 //  
+	 let result;
+	 // 문자열   숫자 비교하면  자동으로 문자열-> 숫자 변환
+	 if (  isNaN( age ) ) {
+		 result = "입력 잘못했다..."
+	} else {
+       result =  age >= 18 ? "old" : "young";
+	} 
+	 document.getElementById("demo").innerHTML = result; 
+	 
+ }
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+

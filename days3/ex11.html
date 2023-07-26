@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>2023. 4. 28. 오후 4:20:41</title>
+<link rel="shortcut icon" type="image/x-icon" href="../images/SiSt.ico">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<style>
+  *{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* css 선택자 */
+  input[type=text]{
+     border: 1px solid grey;
+     padding: 5px;
+     font-size: 20px;
+     margin:10px;
+     width:90%;
+  }
+  
+  /* 특정상태 ,   :의사클래스 */
+  input[type=text]:focus{
+     background-color: yellow;
+  }
+</style>
+</head>
+<body>
+<!-- autofocus="autofocus" -->
+<input type="text"  id="txtbox1"  onkeyup="txt1_keyup();">
+<br>
+<input type="text"  id="txtbox2">
+<pre>
+   [키 관련 이벤트 ]
+   1. keydown 이벤트 : 키보드를 누를때, 기능키(Ctrl, F) O , 대,소문자 X, 이벤트 취소 O
+   2. keypress 이벤트 :키보드를 누를때, 기능키(Ctrl, F) X , 대,소문자 O,  이벤트 취소 O
+   3. keyup 이벤트 :  키보드를 놓을 때                                                      , 이벤트 취소 X
+</pre>
+<script>
+  // 전역변수
+  var txt1 ;
+  let   txt2;
+  
+  window.onload = function (){
+	  // 초기화
+	  txt1 = document.getElementById("txtbox1");
+	  txt2 = document.getElementById("txtbox2");
+	  // alert( txt2 );   object  HTMLInputElement
+	  txt1.focus();
+  } // load
+  
+  function txt1_keyup(){
+	  // event 객체 : 이벤트 정보
+	  // alert(   event.type   ); // keyup 
+	  // console.log(  event.keyCode  );   'a' -> 65
+	  // txt2.value = String.fromCharCode( event.keyCode );
+	  if( event.keyCode == 13 ){  // 엔터
+		  txt2.value = txt1.value;
+	      txt1.select();
+	  }
+	  
+  } 
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+

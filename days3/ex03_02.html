@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>2023. 4. 28. 오전 9:49:09</title>
+<link rel="shortcut icon" type="image/x-icon" href="../images/SiSt.ico">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+</head>
+<body>
+<button>실행</button>
+<div id="demo" style="border:1px solid gray"></div>
+<!-- table[border=1 width=300]>tr*3>td*3>lorem1 -->
+<script>
+var content = "";
+content +="<table border='1' width='300'>  ";
+content +="<tr>                            ";
+content +="	<td>Lorem.</td>                ";
+content +="	<td>Quaerat.</td>              ";
+content +="	<td>Numquam!</td>              ";
+content +="</tr>                           ";
+content +="<tr>                            ";
+content +="	<td>Lorem.</td>                ";
+content +="	<td>Repellendus.</td>          ";
+content +="	<td>Ad.</td>                   ";
+content +="</tr>                           ";
+content +="<tr>                            ";
+content +="	<td>Lorem.</td>                ";
+content +="	<td>Tenetur.</td>              ";
+content +="	<td>Consequatur.</td>          ";
+content +="</tr>                           ";
+content +="</table>                        ";
+
+  document.querySelector("button").onclick  = ()=>{
+	  document.write(  content );
+  };
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+

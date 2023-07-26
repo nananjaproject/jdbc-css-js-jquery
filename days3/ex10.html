@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>2023. 4. 28. 오후 4:10:03</title>
+<link rel="shortcut icon" type="image/x-icon" href="../images/SiSt.ico">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+</head>
+<body>
+
+<h2>Greetings</h2>
+<div class="container">
+  <div class="inner">Hello</div>
+  <div class="inner">Goodbye</div>
+</div>
+
+<script>
+   $("h2").click(function(event) {
+	   // $( ".inner" ).append( "<p>Test</p>" );  // htmlString
+	   $( ".container" ).append( $( "h2" ) );          // jquery Object
+   });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>2023. 4. 28. 오후 2:22:20</title>
+<link rel="shortcut icon" type="image/x-icon" href="../images/SiSt.ico">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<style>
+  #demo{
+     width: 300px;
+     height: 200px;
+     border:1px solid gray;
+     overflow: auto;
+  }
+</style>
+</head>
+<body>
+
+설문조사 항목 갯수 : 
+<select id="itemCount">
+   <option value="" selected="selected">선택...</option>
+   <!-- option[value=$]*15>{$} -->
+   <!-- 3:03수업 시작 -->
+</select>
+
+<p id="demo"></p>
+
+ <script>
+     window.onload = function (){
+    	 // 초기화
+    	 /*
+    	 for (var i = 1; i <= 50; i++) {
+    		 let op = document.createElement("option");
+    		 op.setAttribute("value", i);
+    		 // op.innerText = i;
+    		 op.text = i;
+    		 document.querySelector("#itemCount").appendChild(op);
+		} // for
+		*/
+		
+		 // Option() 생성자를 사용해서 <option> 생성해서 추가.
+		 // 5개
+		 let s = document.getElementById("itemCount");
+		 for (var i = 1; i <= 50; i++) {
+			 // <option value="1">1</option>
+			 s[i] = new Option(i , i);
+			 // s.options[i] = new Option(i,i);
+		 }
+		
+     } // load
+ 
+    document.querySelector("#itemCount").onchange = function (){
+    	let count = this.options[this.selectedIndex].value;
+    	// alert( count );
+    	// 초기화
+    	document.querySelector("#demo").innerHTML = "";
+    	
+    	for (var i = 0; i < count ; i++) {
+    		
+    		let no = document.createTextNode("항목 " + (i+1) + " : " );
+    		document.querySelector("#demo").appendChild(no);
+    		
+    		// 동적으로 input type="text" 요소 생성
+    		// <input type="text" name="item1" class="box">
+        	let textbox = document.createElement("input");
+        	
+        	textbox.setAttribute("type", "text");
+        	textbox.setAttribute("name", "item" + i);
+        	textbox.setAttribute("id", "item" + i);
+        	textbox.className = "box";
+        	// textbox.classList.add(token)
+        	
+        	// document.body == <body>요소
+        	// document.body.appendChild(textbox);	
+        	document.querySelector("#demo").appendChild(textbox);
+        	
+        	let br = document.createElement("br");
+        	document.querySelector("#demo").appendChild(br);
+        	
+		} // for
+    }
+ </script>
+
+</body>
+</html>
+
+
+
+
+
+
+

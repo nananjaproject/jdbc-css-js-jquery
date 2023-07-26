@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="icon"type="image/x-icon"href="../images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<style>
+*{
+	box-sizing: border-box;
+	/*ㄴ중요!! 패딩 속성 전체 너비에 영향X*/
+}
+	.box{
+		width: 33.33%;
+		float: left;
+		height: 200px;
+		padding: 50px;
+	}
+	
+	/*
+	:의사 클래스
+	::의사요소
+	*/
+	.clearfix::after{
+		content: "";
+		display: table;
+		clear: both;
+	}
+</style>
+</head>
+<body>
+<h3>동일 폭 상자(div) / 상자 그리드</h3>
+<!-- CSS Flexbox 속성을 사용해서 레이아웃 모듈 -->
+
+<!-- .clearfix>.box*3>p>lorem4 -->
+<div class="clearfix">
+	<div class="box" style="background-color: #bbb">
+		<p>Lorem ipsum dolor sit.</p>
+	</div>
+	<div class="box" style="background-color: #ccc">
+		<p>Ex error laborum non.</p>
+	</div>
+	<div class="box" style="background-color: #ddd">
+		<p>Sequi numquam minus hic!</p>
+	</div>
+</div>
+<!-- p>strong{Note:}+lorem -->
+<p><strong>Note:</strong>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore maxime officiis ipsa possimus qui id doloremque voluptatem corporis odio atque. Recusandae dolorum debitis reprehenderit ea totam temporibus voluptatem iste nam.
+</p>
+</body>
+</html>

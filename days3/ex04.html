@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="icon"type="image/x-icon"href="../images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<style>
+	.center{
+		width: 60%;
+		border: 3px solid #73ad21;
+		padding: 10px;
+		
+		margin: auto; /*박스 가운데로*/
+		
+		text-align: center; /*글자 가운데 정렬*/
+	}
+	
+/*이미지 태그는 인라인 모드이므로 자동으로 옆에 붙게 됨. 가운데로 옮길 수 없음. -display block 해줘야 함.*/
+img{
+	display: block;
+	margin: 0 auto;
+
+}
+
+/*오른쪽 또는 왼쪽 정렬*/
+.right{
+	width: 300px;
+	border: 3px solid #73ad21;
+	padding: 10px;	
+	
+	/* float: right; */
+	position: absolute; /*절대좌표*/
+	right: 0;
+}
+	
+</style>
+</head>
+<body>
+<h3>css layout(배치)-수평, 수직 정렬</h3>
+
+<!-- .center>p{hello world} -->
+<div class="center">
+	<p>hello world!</p>
+</div>
+
+<!-- 이미지 가운데 정렬 -->
+<img src="../images/paris.jpg" alt="Paris" style="width:40%"/>
+
+<br>
+
+<!-- .right>lorem -->
+<div class="right">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat tempore beatae sit provident sed dolorem eveniet at fugit illo necessitatibus vitae quisquam. Non odio quas quaerat magni ut fugit nobis!
+</div>
+</body>
+</html>
